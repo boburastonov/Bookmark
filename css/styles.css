@@ -1,3 +1,10 @@
+:root{
+  --text-color: #242a45;
+  --text-color-light: rgb(36, 42, 69, .5);
+  --bg-color: #5267DF;
+  --line-bg: #FA5959;
+}
+
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -17,11 +24,13 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: normal;
   background-color: #fff;
-  color: #222;
+  color: var(--text-color);
 }
 
 img {
@@ -72,17 +81,109 @@ select:-webkit-autofill:focus {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1150px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.btn{
+  padding: 10px 24px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: .25px;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  text-align: center;
+  text-decoration: none;
 }
 
 
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+}
+
+/* Site-header */
+.site-header {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.site-header__logo {
+  margin-right: auto;
+  width: 149px;
+  height: 25px;
+  display: block;
+}
+
+.site-header__logo--img:hover{
+  opacity: 0.8;
+}
+
+.site-header__logo--img:active{
+  opacity: 0.6;
+}
+
+.site-header__navbar{
+  margin-right: 48px;
+}
+
+.site-header__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-header__item:not(:last-child) {
+  margin-right: 48px;
+}
+
+.site-header__link {
+  display: inline-block;
+  color: var(--text-color);
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color .3s ease;
+}
+
+.site-header__link:hover{
+  color: var(--line-bg);
+}
+
+.site-header__link:active{
+  opacity: .6;
+}
+
+.site-header__btn {
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 1.5px;
+  background-color: var(--line-bg);
+  transition: all .5s ease;
+}
+
+.site-header__btn:hover{
+  border-color: var(--line-bg);
+  background-color: #fff;
+  color: var(--line-bg);
+}
+
+.site-header__btn:active{
+  opacity: 0.6;
 }
 
 @media
