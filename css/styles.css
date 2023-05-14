@@ -24,11 +24,12 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
   font-family: "Rubik", "Arial", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  letter-spacing: normal;
+  letter-spacing: 0px;
   background-color: #fff;
   color: var(--text-color);
 }
@@ -99,6 +100,7 @@ select:-webkit-autofill:focus {
   border: 2px solid transparent;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 
@@ -173,7 +175,7 @@ select:-webkit-autofill:focus {
   line-height: 17px;
   letter-spacing: 1.5px;
   background-color: var(--line-bg);
-  transition: all .5s ease;
+  transition: all .3s ease;
 }
 
 .site-header__btn:hover{
@@ -184,6 +186,95 @@ select:-webkit-autofill:focus {
 
 .site-header__btn:active{
   opacity: 0.6;
+}
+
+/* HERO */
+.hero {
+  padding-top: 66px;
+  padding-bottom: 105px;
+  background-image: url(../images/hero-bg.svg);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 707px) 200px;
+}
+
+.hero__container{
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero__info {
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-right: 65px;
+  padding-top: 66px;
+  flex-shrink: 0;
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 500;
+  letter-spacing: -0.15px;
+  text-transform: capitalize;
+}
+
+.hero-text {
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: var(--text-color-light);
+}
+
+.hero_buttons {
+  display: flex;
+  align-items: center;
+}
+
+.hero__btn:not(:last-child) {
+  margin-right: 16px;
+}
+
+.btn-chrome {
+  background-color: var(--bg-color);
+  transition: all .3s ease;
+}
+
+.btn-chrome:hover{
+  border-color: var(--bg-color);
+  color: var(--bg-color);
+  background-color: #fff;
+}
+
+.btn-chrome:active{
+  opacity: .6;
+}
+
+.btn-firefox {
+  color: var(--text-color);
+  background-color: #f7f7f7;
+  transition: all .3s ease;
+}
+
+.btn-firefox:hover{
+  border-color: #5B6074;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.btn-firefox:active{
+  opacity: 0.6;
+}
+
+.hero__img {
+  width: 578px;
+  height: 385px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 @media
